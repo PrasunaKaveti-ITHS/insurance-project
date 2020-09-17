@@ -1,137 +1,113 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    }
 body{
     background: #E5E5E5;
-}
-    
-    h1,h2 {
+    font-family: Fira Sans;
+
+} 
+h1, h2{
     font-family: Frank Ruhl Libre;
     font-style: normal;
-}
-
-p {
-    font-family: Fira Sans;
-    font-style: normal;
-}
-
-/*-----------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------*/
-
-.main-block {
-    display: flex;
-    height: 100%;
-    margin: auto;
-    max-width: 1002px;
-    flex-direction: column;
-}
-
-/*-----------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------*/
-
-.main-block .section-1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: " section-1-box-1 section-1-box-2" "section-1-box-1 section-1-box-3";
-}
-.main-block .section-1-box-1{
-    height: 544px;
-    background-color: #C7DDEA;
-    display: flex;
-    background-image: url(../img/family.png);
-    background-position:bottom,right;
-    background-repeat: no-repeat;
-    background-size: 286px 279px;
-    grid-area: section-1-box-1;
-    flex-direction: row;
-}
-.main-block .section-1-box-1 .section-hd {
-    font-size: 80%;
-    padding-left: 5rem;
-    padding-top: 3rem;
-}
-
-.main-block .section-1-box-1 p {
-    width: 268px;
-    height: 103px;
-}
-
-.main-block .section-1-box-1 h1 {
     font-weight: 900;
+    letter-spacing: -0.02em;
+
+}   
+h1{
     font-size: 45px;
     line-height: 100%;
-    letter-spacing: -0.02em;
-    width: 314px;
-    height: 101px;
 }
-.main-block .section-1-box-1 .section-hd span {
+h2{
+    font-size: 32px;
+    line-height: 41px;
+}
+p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+
+}
+.main-block{
+    max-width: 1002px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.section-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "box-1 box-2" "box-1 box-3";
+}
+.section-1 .box-1{
+    grid-area: box-1;
+    height: 544px;
+    background: #C7DDEA;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/family.png);
+    background-position:right bottom;
+    background-repeat: no-repeat;
+    background-size: 286px 279px;
+}
+.section-1 .box-2{
+    grid-area: box-2;
+    background: #F17949;
+}
+.section-1 .box-3{
+    grid-area: box-3;
+    background: #FAB131;
+}
+.box1-med-img{
+    margin: 71px 17px 0 105px;
+    display: flex;
+    flex-direction: column;
+}
+.section-1 h1, .section-3 h1{
+    max-width: 314px;
+    color: #000000;
+}
+.section-1 p{
+    max-width: 268px;
+}
+.section-1 p , .section-3-box-2 p{
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.section-1 p span {
     color: white;
 }
-/*.main-block .section-1-box-1 img {
-    display: flex;
-    width: 286px;
-    height: 279px;
-    background-size: 100%;
-    align-self: flex-end;
-    justify-self: flex-end;
-}*/
-.section-1-box-2{
-    background: #F17949;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: section-1-box-2;
-
-}
-
-.main-block .section-1-box-3{
-    height: 100%;
-    background: #FAB131;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: section-1-box-3;
-
-}
-
- button {
-    color: black;
-    background-color: white;
-    border-radius: 10px;
-    left: 20%;
-    top: 35%;
+button{
     width: 131px;
     height: 39px;
-
+    margin-top: 58px;
     background: #FFFFFF;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
     border-radius: 100px;
-
 }
-
-.section-1-box-2  p ,  .section-1-box-3 p{
-    font-family: Fira Sans;
-    font-style: normal;
+.box-2, .box-3, .box-2 .item, .box-3 .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+.box-2 .item, .box-3 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-2 p, .box-3 p{
     font-weight: bold;
     font-size: 11px;
     line-height: 13px;
-    align-items: center;
-    text-align: center;
     letter-spacing: -0.02em;
-    
     color: rgba(0, 0, 0, 0.5);
-    
+    height: 17px;
 }
-
-.section-1-box-2 h2 , .section-1-box-3 h2{
-    color: white;
-    font-weight: 900;
-    font-size: 32px;
-    line-height: 41px;
-    margin: 0;
-    align-items: center;
-    text-align: center;
-    letter-spacing: -0.02em;    
+.box-2 h2, .box-3 h2{
+    color: #FFFFFF;
 }
-
 nav {
     text-align: center;
     display: flex;
@@ -147,148 +123,95 @@ nav a {
     opacity: 0.4;
     width: 167px;
 }
-
 nav a.active {
     opacity: 1;
 }
 
-.wrapper{
-    padding: 4rem;
-    margin-top: 3rem;
-    grid-area:wrapper ;
-}
-.wrapper2{
-    padding: 4rem;
-    margin-top: 3rem;
-    grid-area: wrapper2;
-}
-.wrapper3{
-    padding: 4rem;
-    margin-top: 3rem;
-    grid-area: wrapper3;
-}
-
-.wrapper h1{
-    font-family: Frank Ruhl Libre;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 45px;
-    line-height: 100%;
-    /* or 45px */
-    letter-spacing: -0.02em;
-    color: #FFFFFF;
-}
-
-
-
 .section-3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "wrapper wrapper2" "wrapper3 wrapper3";
+    grid-template-areas: "section-3-box-1 section-3-box-2" "section-3-box-3 section-3-box-3";
     background: #A9A19E;
+    height: 612px;
 }
-.about {
-    background: #FAB131;
-    padding-top: 3rem;
+.section-3-box-1{
+    grid-area: section-3-box-1;
+    margin: 103px 0 0 107px;
+}
+.section-3-box-2{
+    grid-area: section-3-box-2;
+}
+.section-3-box-3{
+    grid-area: section-3-box-3;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    text-align: center;
-    
 }
-
-.about h1{
-    font-family: Frank Ruhl Libre;
-
-    margin-top: 20%;
-    font-weight: 900;
-    font-size: 45px;
-    line-height: 100%;
-    letter-spacing: -0.02em;
-    color: white;
-    text-align: center;
-}
-.about p {
-
-        font-family: Fira Sans;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        /* or 143% */
-
-        text-align: center;
-
-        color: rgba(0, 0, 0, 0.6);
-}
-
-.rectangle {
-    position: absolute;
+.insurance-type{
     display: flex;
+    flex-direction: row ;
+    justify-content: center;
+}
+.section-3 h1{
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.section-3-box-2 p{
+    max-width: 280px;
+    height: 237px;
+    margin: 103px 129px 87px 0 ;
+}
+
+.insurance-type{
+    position: absolute;
     height: 308px;
     z-index: 100;
-    margin-top: -110px;
-    justify-content: center;
-    flex-wrap: wrap;
-
+    margin-top: -80px;
 }
-
-.rectangle-box {
-    width: 256px;
+.type-box {
+    max-width: 256px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    margin: 1rem;
-
+    margin: 13.5px;
 }
 
-.rectangle-box p,h2 {
-    text-align: center;
-}
-
-.rectangle-box p {
-    font-style: normal;
+.type-box p {
     font-weight: bold;
     font-size: 11px;
     line-height: 18px;
     text-align: center;
     color: rgba(0, 0, 0, 0.4);
-    margin: 1rem;
+    margin: 0 22px 27px 22px;
 }
-
-.rectangle-box h2 {
-
+.type-box h2 {
     font-weight: bold;
     font-size: 16px;
-    line-height: 20px;
-
+    line-height: 20px;    
+    text-align: center; 
     color: rgba(0, 0, 0, 0.9);
 }
-.profileIMG {
+.profile-img {
     height: 125px;
-    background-color: orange;
     overflow: hidden;
     padding-top: 2rem;
     margin: 1rem;
     margin-top: -2rem;
 }
-
-
-.firstIMG {
+.img-1 {
     background: #C7DDEA;
     border-radius: 4px;
 }
-.secondIMG {
+.img-2 {
     background: #FAB131;
     border-radius: 4px;
 
 }
-.thirdIMG {
+.img-3 {
     background: #F17949;
     border-radius: 4px;
 }
-
-
-
 .imageSize1 {
     width: 80px;
 
@@ -301,15 +224,37 @@ nav a.active {
     width: 120px;
 
 }
-
-.classic{
-    max-width: 442px;
+.aboutUs{
+    background: #FAB131;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 187px;
+    padding-bottom: 101px;
 }
+.aboutUs h1{
+    max-width: 314px;
+    height: 101px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+.aboutUs p{
+    max-width: 442px;
+    line-height: 20px;    
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
 .Kalendar{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "how-info info-box1 info-box2" "info-box3 info-box4 info-box5";
 }
+
 
 .small-box {
     background-color: black;
@@ -318,12 +263,10 @@ nav a.active {
     text-align: center;
     display: flex;
 }
-
 .small-box span {
     position: absolute;
     align-self: flex-start;
     margin: 1rem;
-
     font-weight: 900;
     font-size: 35px;
     line-height: 100%;
@@ -335,149 +278,73 @@ nav a.active {
 }
 .small-box p {
     width: 100%;
-    font-weight: 500;
     font-size: 17px;
     line-height: 20px;
-
-    
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
 }
 .how-info {
     background: #C7DDEA;
-
     font-weight: 900;
     font-size: 130%;
     line-height: 100%;
     grid-area: how-info;
-
 }
-
 
 
 .info-box1 {
     background: #FFFFFF;
-
     font-weight: 500;
     font-size: 17px;
     line-height: 20px;
     grid-area: info-box1;
-
 }
 
 .info-box2 { 
     background: #EBEBEB;
     grid-area: info-box2;
-
 }
 
 .info-box3 {
     background: #FFFFFF;
     grid-area: info-box3;
-
 }
 
 .info-box4 {
     background: #F17949;
     grid-area: info-box4;
-
 }
 
 .info-box5 {
     background: #FFFFFF;
     grid-area: info-box5;
-
 }
-@media only screen and (max-width: 600px) {
-    
-    .main-block .section-1{
-        grid-template-columns: 1fr;
-        grid-template-areas: " section-1-box-1 " "section-1-box-2" "section-1-box-3";
-        }
-        .main-block .section-1-box-1{
-            height: 724px;    
-        }
-        
-        .main-block .section-1-box-2{
-            height: 315px;
-        }
-        /*jghfggklhjh jkghfjkhghgjkagjhfgkdhjh asdjhfjgahgas da*/
-        .main-block .section-1-box-3{
-            height: 315px;
-        }
-        nav {
-            display: none;
-        }
-        .section-3 {
-            display: flex;
-            flex-direction: column;
-        }
-        .section-3 button{
-            display: none;
-        }
-        .wrapper, .wrapper2{
-            padding: 0;
-            margin: 20px;
-            grid-area:wrapper ;
-        }
-       .rectangle {
-            position: unset;
-            display: flex;
-            height: auto;
-            margin-top: 20px;        
-        }
+.take-to-top{
+    grid-column: auto / span 6;
+    height: 68px;
+    background: #A9A19E;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .rectangle-box {
-            width: 100%;
-            margin: 3rem;
-            min-width: 256px;
-        }
+.take-to-top a{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    margin-top: 3rem;
+}
+footer{
+height: 340px;
+background: #777574;
+}
 
-        .Kalendar{
-            display: flex;
-            flex-direction: column;
-        }
-        .small-box {
-            height: 170px;
-        }
-        .info-box1 { 
-            background: #EBEBEB;
-        
-        }
-        
-        .info-box2 {
-            background: #FFFFFF;
-        
-        }
-        .classic{
-            margin: 0 30px 0 30px;
-    
-      } 
-      
-
-      @media only screen and (max-width: 850px) {
-        .rectangle {
-            position: unset;
-            display: flex;
-            height: auto;
-            margin-top: 20px;        
-        }
-        .rectangle-box {
-            width: 100%;
-            margin: 3rem;
-            min-width: 256px;
-        }
-        .Kalendar{
-            grid-template-columns: 1fr 1fr ;
-            grid-template-areas: "how-info info-box1 " "info-box2 info-box3" " info-box4 info-box5";
-        }
-        .info-box2 { 
-            background: #FFFFFF;
-
-        }
-        
-        .info-box3 {
-            background: #EBEBEB;
-        
-        }
-
-       }
-       
